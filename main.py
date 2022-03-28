@@ -39,6 +39,20 @@ elif target_function == '2':
     count += 1
   print()
 elif target_function == '3':
-  print('Función 3 elegida')
+  result = functions.top_days(dataset)
+  print()
+  print('Top 10 days by number of tweets:')
+  count = 1
+  for tweet in result:
+    print(f'\t[{count}] {tweet[0]}: {tweet[1]} tweets')
+    count += 1
+  print()
 elif target_function == '4':
-  print('Función 4 elegida')
+  result = functions.top_hashtags(dataset)
+  print()
+  print('Top 10 hashtags:')
+  count = 1
+  for tweet in result:
+    print(f'\t[{count}] {tweet[0]}: {tweet[1]} tweets')
+    count += 1
+  print()
