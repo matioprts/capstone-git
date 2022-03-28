@@ -30,7 +30,14 @@ if target_function == '1':
     count += 1
   print()
 elif target_function == '2':
-  print('Función 2 elegida')
+  result = functions.top_users(dataset)
+  print()
+  print('Top 10 users by number of tweets:')
+  count = 1
+  for tweet in result:
+    print(f'\t[{count}] {tweet[0]}: {tweet[1]} tweets')
+    count += 1
+  print()
 elif target_function == '3':
   print('Función 3 elegida')
 elif target_function == '4':
